@@ -3,7 +3,7 @@ from . import get_data
 from django.http import HttpResponse, JsonResponse
 import json
 
-def homepage_view(request):
+def view_all(request):
 	data = get_data.generate_geojson()
 	print("Before dumps type: ", type(data))
 	data = json.dumps(data)
